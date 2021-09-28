@@ -1,3 +1,7 @@
+import imgParthnetData1 from "./CardParthnerImg/1.jpg";
+import imgParthnetData2 from "./CardParthnerImg/2.jpg";
+import imgParthnetData3 from "./CardParthnerImg/3.jpg";
+
 export const Api = {
   // baseUrl: "http://localhost:3001",
   // readAllUrl: () => Api.baseUrl + "/personagem",
@@ -57,7 +61,7 @@ export const Api = {
       valor: "189.90",
     },
   ],
-  partnerData: [
+  partneService: [
     {
       id: 1,
       name: "Auto Filadelfia Center",
@@ -86,33 +90,32 @@ export const Api = {
       valor: "149.90",
     },
   ],
-  partner: [
-      {
-        id: 1,
-        imagemUrl: "https://www.cantupneus.com.br/medias/sys_master/he2/h61/9469373775902/fotoOficina-37640212000143.jpg"
-        AUTO CENTER FILADÉLFIA
-        Rua Brusque, 837, Santa Catarina, Itajaí, 88302001
-        Horário de Atendimento
-        Semana: 08:00 - 18:00
-        Sábado: 08:00 - 12:00 / Domingo: Fechado
-      }
-      
-      
-      id: 2
-  imagemUrl: "https://www.cantupneus.com.br/medias/sys_master/h6e/h91/9538413035550/fotoOficina-08623310000174.jpg"
-  Giba Auto Center
-  Rua Manoel Leopoldo Rocha, 700, Santa Catarina, Navegantes, 88370564
-  Horário de Atendimento
-  Semana: 08:00 - 18:00
-  Sábado: 08:00 - 12:00 / Domingo: Fechado
-  
-   - Parceiro 3
-   imagemUrl: "https://www.cantupneus.com.br/medias/sys_master/h71/ha2/9486653816862/fotoOficina-39843161000182.jpg"
-  Lindomar Centro Automotivo Porto Seguro
-  RUA CONCEICAO, 563, Santa Catarina, ITAJAI, 88304220
-  Horário de Atendimento
-  Semana: 07:30 - 12:00
-  Sábado: 08:00 - 12:00 / Domingo: Fechado
+  partnerData: [
+    {
+      id: 1,
+      imagemUrl: imgParthnetData1,
+      name: "AUTO CENTER FILADÉLFIA",
+      address: "Rua Brusque, 837, Santa Catarina, Itajaí, 88302001",
+      attendance:
+        "Horário de Atendimento - Semana: 08:00 - 18:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
+    },
 
-]
-}
+    {
+      id: 2,
+      imagemUrl: imgParthnetData2,
+      name: "Giba Auto Center",
+      address:
+        "Rua Manoel Leopoldo Rocha, 700, Santa Catarina, Navegantes, 88370564",
+      attendance:
+        " Horário de Atendimento Semana: 08:00 - 18:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
+    },
+    {
+      id: 3,
+      imagemUrl: imgParthnetData3,
+      name: " Lindomar Centro Automotivo Porto Seguro",
+      address: " RUA CONCEICAO, 563, Santa Catarina, ITAJAI, 88304220",
+      attendance:
+        " Horário de Atendimento Semana: 07:30 - 12:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
+    },
+  ],
+};

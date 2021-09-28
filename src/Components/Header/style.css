@@ -1,0 +1,12 @@
+.logo {
+  position: top fixed;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: #4e008e;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #4e008e;
+}
