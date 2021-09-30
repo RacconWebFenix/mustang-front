@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "materialize-css/dist/css/materialize.min.css";
 import "../ServiceMovelInfo/style.css";
 import M from "materialize-css";
-import img1 from "./img/CarouselInfoDataMovel/1.jpg";
-import img2 from "./img/CarouselInfoDataMovel/2.jpg";
-import img3 from "./img/CarouselInfoDataMovel/3.jpg";
+import img1 from "./img/1.jpg";
+import img2 from "./img/2.jpg";
+import img3 from "./img/3.jpg";
 import { Button } from "@material-ui/core";
 
 const infoData = [
@@ -28,8 +28,9 @@ const infoData = [
 document.addEventListener("DOMContentLoaded", function () {
   const elems = document.querySelectorAll(".carousel");
   M.Carousel.init(elems, {
-    duration: 300,
-    indicators: true,
+    dist: -100,
+    padding: 0,
+    shift: 0,
   });
 });
 
@@ -38,14 +39,12 @@ export default function ServiceMovelInfo() {
     <div className="carousel">
       {infoData.map((d, i) => {
         return (
-          <div key={i}>
-            <div className="contCar">
-              <a className="carousel-item" href={"#" + d.id}>
-                <img src={d.imagemUrl} alt="img" />
-                <span>{d.desc}</span>
-              </a>
+          <a className="carousel-item" href={"#" + d.id}>
+              <img src={d.imagemUrl} alt="img" />
+            <div className="descMovCarousel">
+              <span>{d.desc}</span>
             </div>
-          </div>
+          </a>
         );
       })}
     </div>

@@ -1,0 +1,12 @@
+.cardContainer img {
+  width: 20rem;
+}
+.card {
+  max-width: 20rem;
+  min-width: 8rem;
+  
+}
+.nameContainer {
+  max-height: 2rem;
+  overflow: auto;
+}

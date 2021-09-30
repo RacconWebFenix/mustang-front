@@ -99,7 +99,6 @@ export const Api = {
       attendance:
         "Horário de Atendimento - Semana: 08:00 - 18:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
     },
-
     {
       id: 2,
       imagemUrl: imgParthnetData2,
@@ -116,6 +115,39 @@ export const Api = {
       address: " RUA CONCEICAO, 563, Santa Catarina, ITAJAI, 88304220",
       attendance:
         " Horário de Atendimento Semana: 07:30 - 12:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
+    },
+    {
+      id: 4,
+      imagemUrl: imgParthnetData1,
+      name: "AUTO CENTER FILADÉLFIA",
+      address: "Rua Brusque, 837, Santa Catarina, Itajaí, 88302001",
+      attendance:
+        "Horário de Atendimento - Semana: 08:00 - 18:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
+    },
+    {
+      id: 5,
+      imagemUrl: imgParthnetData2,
+      name: "Giba Auto Center",
+      address:
+        "Rua Manoel Leopoldo Rocha, 700, Santa Catarina, Navegantes, 88370564",
+      attendance:
+        " Horário de Atendimento Semana: 08:00 - 18:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
+    },
+    {
+      id: 6,
+      imagemUrl: imgParthnetData3,
+      name: " Lindomar Centro Automotivo Porto Seguro",
+      address: " RUA CONCEICAO, 563, Santa Catarina, ITAJAI, 88304220",
+      attendance:
+        " Horário de Atendimento Semana: 07:30 - 12:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
+    },
+    {
+      id: 7,
+      imagemUrl: imgParthnetData1,
+      name: "AUTO CENTER FILADÉLFIA",
+      address: "Rua Brusque, 837, Santa Catarina, Itajaí, 88302001",
+      attendance:
+        "Horário de Atendimento - Semana: 08:00 - 18:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
     },
   ],
 };

@@ -3,7 +3,7 @@ import imgLogo from "./img/headerLogo.png";
 import "./style.css"
 
 
-export default function Header() {
+export default function HeaderComponent() {
   return (
     <div>
       <header className="logo">

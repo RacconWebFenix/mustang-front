@@ -2,20 +2,19 @@ import Button from "@material-ui/core/Button";
 import { useEffect, useState } from "react";
 import { Api } from "./Api/Api";
 import "./App.css";
-import CardParthner from "./Components/CardsParthner/CardParthner";
+import CarouselParthner from "./Components/CarouselParthner/CarouselParthner";
+import HeaderComponent from "./Components/Header/Header";
 import Header from "./Components/Header/Header";
 import ServiceMovelInfo from "./Components/ServiceMovelInfo/ServiceMovelInfo";
+import Home from "./Pages/Home";
 
 function App() {
   const [serviceMovel, setServiceMovel] = useState([]);
   const [servicParthner, setServicParthner] = useState([]);
- 
 
   const getDataServiceMovel = Api.serviceMovelData;
 
   const getDataServiceParthner = Api.partneService;
-
- 
 
   const loadDataServiceMovel = () => {
     setServiceMovel(getDataServiceMovel);
@@ -25,8 +24,6 @@ function App() {
     setServicParthner(getDataServiceParthner);
   };
 
-  
-
   useEffect(() => {
     loadDataServiceMovel();
   });
@@ -35,16 +32,14 @@ function App() {
     loadDataServiceParthner();
   });
 
-  
   console.log(serviceMovel);
   console.log(getDataServiceParthner);
 
   return (
     <>
-      <Header />
-
-      <CardParthner />
-      {/* <ServiceMovelInfo /> */}
+    
+      <HeaderComponent />
+      <Home />
 
       {/* {serviceMovel.map((sm, i) => {
         return (
@@ -56,6 +51,7 @@ function App() {
         );
       })} */}
 
+      
       {/* {servicParthner.map((sp, i) => {
         return (
           <ul key={i}>
