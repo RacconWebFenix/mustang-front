@@ -1,6 +1,35 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-top: 12vh;
+  margin-top: 10vh;
+}
 
+.validate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90vw;
+}
+
+.input-field {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.serviceMovelContentTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  color: #4e008e;
+}
+
+.opcDelivery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 95vw;
 }

@@ -4,9 +4,17 @@
 .card {
   max-width: 20rem;
   min-width: 8rem;
-  
 }
 .nameContainer {
   max-height: 2rem;
   overflow: auto;
+}
+
+.cardServiceCombo {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  
 }

@@ -1161,6 +1161,39 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
+"@date-io/core@^2.11.0":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@date-io/core/-/core-2.11.0.tgz#28580cda1c8228ab2c7ed6aee673ef0495f913e6"
+  integrity sha512-DvPBnNoeuLaoSJZaxgpu54qzRhRKjSYVyQjhznTFrllKuDpm0sDFjHo6lvNLCM/cfMx2gb2PM2zY2kc9C8nmuw==
+
+"@date-io/date-fns@^2.10.6":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@date-io/date-fns/-/date-fns-2.11.0.tgz#142fbf954eda7ad66514af7a2802d78c4ea40053"
+  integrity sha512-mPQ71plBeFrArvBSHtjWMHXA89IUbZ6kuo2dsjlRC/1uNOybo91spIb+wTu03NxKTl8ut07s0jJ9svF71afpRg==
+  dependencies:
+    "@date-io/core" "^2.11.0"
+
+"@date-io/dayjs@^2.10.6":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@date-io/dayjs/-/dayjs-2.11.0.tgz#41f4b4b9629612e6012accffd848875d1aeffb74"
+  integrity sha512-w67vRK56NZJIKhJM/CrNbfnIcuMvR3ApfxzNZiCZ5w29sxgBDeKuX4M+P7A9r5HXOMGcsOcpgaoTDINNGkdpGQ==
+  dependencies:
+    "@date-io/core" "^2.11.0"
+
+"@date-io/luxon@^2.10.6":
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/@date-io/luxon/-/luxon-2.11.1.tgz#31a72f7b5e163c74e8a3b29d8f16c4c30de6ed43"
+  integrity sha512-JUXo01kdPQxLORxqdENrgdUhooKgDUggsNRSdi2BcUhASIY2KGwwWXu8ikVHHGkw+DUF4FOEKGfkQd0RHSvX6g==
+  dependencies:
+    "@date-io/core" "^2.11.0"
+
+"@date-io/moment@^2.10.6":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@date-io/moment/-/moment-2.11.0.tgz#850f8dd090d401845b39276d034dbabe20224ef5"
+  integrity sha512-QSL+83qezQ9Ty0dtFgAkk6eC0GMl/lgYfDajeVUDB3zVA2A038hzczRLBg29ifnBGhQMPABxuOafgWwhDjlarg==
+  dependencies:
+    "@date-io/core" "^2.11.0"
+
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.3.0.tgz#3a16850ba04d8d9651f07f3fb674b3436a4fb9d7"
@@ -1533,6 +1566,25 @@
   integrity sha512-fQNsKX2TxBmqIGJCSi3tGTO/gZ+eJgWmMJkgDiOfyNaunNaxcklJQFaFogYcFl0qFuaEz1qaXYXboa/bUXVSOQ==
   dependencies:
     "@babel/runtime" "^7.4.4"
+
+"@material-ui/lab@^5.0.0-alpha.44":
+  version "5.0.0-alpha.44"
+  resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-5.0.0-alpha.44.tgz#3b914047031a12ff7575fa5bb775dda7e90519f1"
+  integrity sha512-x5Tovc8rgxAoLZ8Hcm45tfCVlgYnUEbxIoRAQ2Bc+rEulYfdZY+xq492mt4wzwSCh8ZoTq7IwrL1sXN/SaLPdA==
+  dependencies:
+    "@babel/runtime" "^7.14.8"
+    "@date-io/date-fns" "^2.10.6"
+    "@date-io/dayjs" "^2.10.6"
+    "@date-io/luxon" "^2.10.6"
+    "@date-io/moment" "^2.10.6"
+    "@material-ui/system" "5.0.0-beta.5"
+    "@material-ui/unstyled" "5.0.0-alpha.44"
+    "@material-ui/utils" "5.0.0-beta.5"
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+    react-is "^17.0.2"
+    react-transition-group "^4.4.1"
+    rifm "^0.12.0"
 
 "@material-ui/private-theming@5.0.0-beta.5":
   version "5.0.0-beta.5"
@@ -4202,6 +4254,11 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
+
+date-fns@2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.17.0.tgz#afa55daea539239db0a64e236ce716ef3d681ba1"
+  integrity sha512-ZEhqxUtEZeGgg9eHNSOAJ8O9xqSgiJdrL0lzSSfMF54x6KXWJiOH/xntSJ9YomJPrYH/p08t6gWjGWq1SDJlSA==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -7405,11 +7462,6 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-materialize-css@^1.0.0-rc.2:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/materialize-css/-/materialize-css-1.0.0.tgz#8d5db1c4a81c6d65f3b2e2ca83a8e08daa24d1be"
-  integrity sha512-4/oecXl8y/1i8RDZvyvwAICyqwNoKU4or5uf8uoAd74k76KzZ0Llym4zhJ5lLNUskcqjO0AuMcvNyDkpz8Z6zw==
-
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -7860,6 +7912,11 @@ normalize-url@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
+
+normalize.css@latest:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -9330,6 +9387,11 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-animated-slider@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-animated-slider/-/react-animated-slider-2.0.0.tgz#121729ba4c76c0aa4f5166ca78d0eda0ec77dd54"
+  integrity sha512-JOvLvqAfdNrYjPJWnCZbtS7d/DxSowDTFeIbaS5xUDEVJe3whgxUD6rDZ6+VI0Rhp9N03ogdpuNKlFJIoPhIyg==
+
 react-app-polyfill@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-2.0.0.tgz#a0bea50f078b8a082970a9d853dc34b6dcc6a3cf"
@@ -9372,7 +9434,7 @@ react-dev-utils@^11.0.3:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^17.0.2:
+react-dom@latest:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
@@ -9483,7 +9545,7 @@ react-slick@^0.28.1:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react-transition-group@^4.4.0, react-transition-group@^4.4.2:
+react-transition-group@^4.4.0, react-transition-group@^4.4.1, react-transition-group@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
   integrity sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==
@@ -9493,7 +9555,7 @@ react-transition-group@^4.4.0, react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^17.0.2:
+react@latest:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
   integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
@@ -9870,6 +9932,11 @@ rgba-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/rgba-regex/-/rgba-regex-1.0.0.tgz#43374e2e2ca0968b0ef1523460b7d730ff22eeb3"
   integrity sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=
+
+rifm@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/rifm/-/rifm-0.12.0.tgz#8d3a9dc0de9c190e0de9bdc8861a91a221dc1341"
+  integrity sha512-PqOl+Mo2lyqrKiD34FPlnQ+ksD3F+a62TQlphiZshgriyHdfjn6jGyqUZhd+s3nsMYXwXYDdjrrv8wX7QsOG3g==
 
 rimraf@^2.5.4, rimraf@^2.6.3:
   version "2.7.1"

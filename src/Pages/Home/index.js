@@ -1,46 +1,43 @@
 import React from "react";
 import CarouselParthner from "../../Components/CarouselParthner/CarouselParthner";
-import DeliveryDropDrown from "../../Components/DeliveryDropDown/DeliveryDropDown";
 import ServiceMovelInfo from "../../Components/ServiceMovelInfo/ServiceMovelInfo";
-
 import Cart from "../Cart";
+import DateComponent from "../../Components/DateComponent";
+import DropDownDelivery from "../../Components/DropDownDelivery/DropDownDelivery";
+import DropTimeCourse from "../../Components/DropTimeCourse/DropTimeCourse";
 import "./style.css";
-
-const handleChage = (e) => {
-  console.log(e.target.value);
-};
 
 export default function Home() {
   return (
-    <div className="container">
-      <div className="">
+    <div>
+      <div className="container">
         <Cart />
       </div>
       <div>
-        Cep Validator
-        <input type="text" onChange={(e) => handleChage(e)} />
+        <div >
+          <input type="text"/>
+          <label htmlFor="cep">Digite o CEP</label>
+        </div>
       </div>
-      <div>
-        <div>Conheça Nosso Seerviço Movel disponivel para seu CEP</div>
+
+      <div className="serviceMovelContent">
+        <div className="serviceMovelContentTitle">
+          Conheça Nosso Serviço Móvel disponível para seu CEP!
+        </div>
         <ServiceMovelInfo />
       </div>
 
-      <div>
-      <DeliveryDropDrown />
-      </div>
+      <DropDownDelivery />
+
       <div>
         <CarouselParthner />
       </div>
-      <ul>
-        <option>Combos</option>
-        <option>Combos 1</option>
-        <option>Combos 2</option>
-      </ul>
-      <div>Componente Data</div>
-      <ul>
-        <option>Matutino</option>
-        <option>Vespertino</option>
-      </ul>
+      <div>
+        <DateComponent />
+      </div>
+      <div>
+        <DropTimeCourse />
+      </div>
       <div>Cupom</div>
       <div>Resumo da compra</div>
     </div>
