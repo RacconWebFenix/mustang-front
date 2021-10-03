@@ -40,7 +40,6 @@ export default function ServiceMovelInfo() {
           >
             <div className="inner">
               <h1>{item.desc}</h1>
-            
             </div>
           </div>
         ))}

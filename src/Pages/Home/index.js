@@ -9,7 +9,6 @@ import "./style.css";
 import { Box } from "@material-ui/system";
 import { TextField } from "@material-ui/core";
 
-
 export default function Home() {
   return (
     <div>
@@ -17,15 +16,15 @@ export default function Home() {
         <Cart />
       </div>
       <div>
-        <div >
-        <Box
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-      }}
-    >
-      <TextField fullWidth label="CEP"  />
-    </Box>
+        <div>
+          <Box
+            sx={{
+              width: 500,
+              maxWidth: "100%",
+            }}
+          >
+            <TextField fullWidth label="CEP" />
+          </Box>
         </div>
       </div>
 
@@ -47,9 +46,7 @@ export default function Home() {
       <div>
         <DropTimeCourse />
       </div>
-      <div>
-  
-      </div>
+      <div></div>
       <div>Cupom</div>
       <div>Resumo da compra</div>
     </div>

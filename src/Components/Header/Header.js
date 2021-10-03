@@ -1,7 +1,6 @@
 import React from "react";
 import imgLogo from "./img/headerLogo.png";
-import "./style.css"
-
+import "./style.css";
 
 export default function HeaderComponent() {
   return (
