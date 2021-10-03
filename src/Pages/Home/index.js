@@ -6,6 +6,9 @@ import DateComponent from "../../Components/DateComponent";
 import DropDownDelivery from "../../Components/DropDownDelivery/DropDownDelivery";
 import DropTimeCourse from "../../Components/DropTimeCourse/DropTimeCourse";
 import "./style.css";
+import { Box } from "@material-ui/system";
+import { TextField } from "@material-ui/core";
+
 
 export default function Home() {
   return (
@@ -15,8 +18,14 @@ export default function Home() {
       </div>
       <div>
         <div >
-          <input type="text"/>
-          <label htmlFor="cep">Digite o CEP</label>
+        <Box
+      sx={{
+        width: 500,
+        maxWidth: '100%',
+      }}
+    >
+      <TextField fullWidth label="CEP"  />
+    </Box>
         </div>
       </div>
 
@@ -37,6 +46,9 @@ export default function Home() {
       </div>
       <div>
         <DropTimeCourse />
+      </div>
+      <div>
+  
       </div>
       <div>Cupom</div>
       <div>Resumo da compra</div>
