@@ -83,7 +83,8 @@ export default function CarouselParthner() {
                 <p>{pd.address}</p>
                 <p>{pd.attendance}</p>
                 <Button onClick={() => handleClick(i)}>
-                  <FavoriteIcon /> Escolher Parceiro
+                  <FavoriteIcon style={{ color: "#4e008e" }} /> Escolher
+                  Parceiro
                 </Button>
               </div>
             </div>

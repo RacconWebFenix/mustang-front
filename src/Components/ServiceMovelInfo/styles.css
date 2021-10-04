@@ -62,7 +62,6 @@ button {
   cursor: cursor;
 }
 
-
 .wrapper {
   max-width: 1335px;
   box-sizing: border-box;
@@ -163,6 +162,7 @@ svg polygon {
 .slider-content .inner button {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+ 
 }
 
 .slider-content .inner h1 {

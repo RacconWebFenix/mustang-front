@@ -2,11 +2,13 @@ import React from "react";
 import img1 from "./img/1.jpg";
 import img2 from "./img/2.jpg";
 import img3 from "./img/3.jpg";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 import "normalize.css/normalize.css";
 import "./slider-animations.css";
 import "./styles.css";
+import { Button } from "@material-ui/core";
 
 const infoData = [
   {
@@ -29,7 +31,7 @@ const infoData = [
 export default function ServiceMovelInfo() {
   return (
     <>
-      <Slider className="slider-wrapper">
+      <Slider className="slider-wrapper" touchDisabled={true}>
         {infoData.map((item, index) => (
           <div
             key={index}
@@ -40,6 +42,10 @@ export default function ServiceMovelInfo() {
           >
             <div className="inner">
               <h1>{item.desc}</h1>
+              <br />
+              <Button>
+                <FavoriteIcon style={{ color: "#4e008e", }} />
+              </Button>
             </div>
           </div>
         ))}

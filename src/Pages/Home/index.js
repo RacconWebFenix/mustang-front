@@ -32,6 +32,10 @@ export default function Home() {
         <div className="serviceMovelContentTitle">
           Conheça Nosso Serviço Móvel disponível para seu CEP!
         </div>
+      </div>
+     
+     
+       <div>
         <ServiceMovelInfo />
       </div>
 
