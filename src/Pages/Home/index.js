@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <div className="container">
-        {/* <Cart /> */}
+        <Cart />
       </div>
       <div>
         <div className="cepContainer">
