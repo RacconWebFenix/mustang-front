@@ -31,6 +31,11 @@ const infoData = [
 export default function ServiceMovelInfo() {
   return (
     <>
+     <div className="serviceMovelContent">
+        <div className="serviceMovelContentTitle" style={{ fontSize: "1rem" }}>
+          Conheça Nosso Serviço Móvel disponível para seu CEP!
+        </div>
+      </div>
       <Slider className="slider-wrapper" touchDisabled={true}>
         {infoData.map((item, index) => (
           <div

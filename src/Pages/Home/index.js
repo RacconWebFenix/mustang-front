@@ -12,30 +12,18 @@ import { TextField } from "@material-ui/core";
 export default function Home() {
   return (
     <div>
-      <div className="container">
-        <Cart />
-      </div>
+      <div className="container"><Cart /></div>
       <div>
-        <div>
+        <div className="cepContainer">
           <Box
-            sx={{
-              width: 500,
-              maxWidth: "100%",
-            }}
+
           >
-            <TextField fullWidth label="CEP" />
+            <TextField label="CEP" sx={{ m: 3, }} />
           </Box>
         </div>
       </div>
 
-      <div className="serviceMovelContent">
-        <div className="serviceMovelContentTitle">
-          Conheça Nosso Serviço Móvel disponível para seu CEP!
-        </div>
-      </div>
-     
-     
-       <div>
+      <div>
         <ServiceMovelInfo />
       </div>
 

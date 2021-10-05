@@ -125,4 +125,25 @@ export const Api = {
         " Horário de Atendimento Semana: 07:30 - 12:00 Sábado: 08:00 - 12:00 / Domingo: Fechado",
     },
   ],
+
+  cart: [
+    {
+      id: 1,
+      marca: "CooperTires",
+      tipo: "Aro 13 CS1 185/70R13 86T",
+      preco: 319.04,
+      descricao: "Melhor Custo Benefício",
+      imgUrl:
+        "https://static.pneustore.com.br/medias/sys_master/images/images/h4c/h6a/8859171291166/pneu-cooper-aro-13-cs1-175-70r13-82t-2.jpg",
+    },
+    {
+      id: 2,
+      marca: "Tornel",
+      tipo: "Aro 13 Classic 175/70R13 82T",
+      preco: 315.02,
+      descricao: "Maior economia",
+      imgUrl:
+        "https://static.pneustore.com.br/medias/sys_master/images/images/h31/hae/8859194949662/pneu-tornel-aro-13-classic-175-70r13-82t-1.jpg",
+    },
+  ],
 };
