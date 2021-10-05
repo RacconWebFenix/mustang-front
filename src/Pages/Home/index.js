@@ -12,13 +12,13 @@ import { TextField } from "@material-ui/core";
 export default function Home() {
   return (
     <div>
-      <div className="container"><Cart /></div>
+      <div className="container">
+        <Cart />
+      </div>
       <div>
         <div className="cepContainer">
-          <Box
-
-          >
-            <TextField label="CEP" sx={{ m: 3, }} />
+          <Box>
+            <TextField label="CEP" sx={{ m: 3 }} />
           </Box>
         </div>
       </div>
@@ -38,8 +38,12 @@ export default function Home() {
       <div>
         <DropTimeCourse />
       </div>
-      <div></div>
-      <div>Cupom</div>
+
+      <div className="cepContainer">
+        <Box>
+          <TextField label="Cupom de Desconto" sx={{ m: 3 }} />
+        </Box>
+      </div>
       <div>Resumo da compra</div>
     </div>
   );
