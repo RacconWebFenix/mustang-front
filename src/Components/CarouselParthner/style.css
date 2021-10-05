@@ -16,5 +16,9 @@
   align-content: center;
   align-items: center;
   margin-top: 4rem;
-  
+}
+
+.inner.parthner button {
+  border: 1px solid #fff;
+  color: #fff;
 }

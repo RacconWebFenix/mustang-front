@@ -78,13 +78,15 @@ export default function CarouselParthner() {
                 background: `url('${pd.imagemUrl}') no-repeat center center`,
               }}
             >
-              <div className="inner">
+              <div className="inner parthner">
                 <h1>{pd.name}</h1>
                 <p>{pd.address}</p>
                 <p>{pd.attendance}</p>
-                <Button onClick={() => handleClick(i)}>
-                  <FavoriteIcon style={{ color: "#4e008e" }} /> Escolher
-                  Parceiro
+                <Button
+                  onClick={() => handleClick(i)}
+                  className="btnCarouselParthner"
+                >
+                  <FavoriteIcon style={{ color: "#fff" }} /> Escolher Parceiro
                 </Button>
               </div>
             </div>

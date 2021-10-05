@@ -8,6 +8,7 @@ import DropTimeCourse from "../../Components/DropTimeCourse/DropTimeCourse";
 import "./style.css";
 import { Box } from "@material-ui/system";
 import { TextField } from "@material-ui/core";
+import ServiceMovelDropDown from "../../Components/ServiceMovelData/ServiceMovelDropDown";
 
 export default function Home() {
   return (
@@ -28,6 +29,9 @@ export default function Home() {
       </div>
 
       <DropDownDelivery />
+      <div>
+        <ServiceMovelDropDown />
+      </div>
 
       <div>
         <CarouselParthner />

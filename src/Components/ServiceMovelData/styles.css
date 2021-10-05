@@ -1,0 +1,14 @@
+.optMovel {
+  display: flex;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #4e008e;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: larger;
+  font-weight: 900;
+  box-shadow: 0 0 15px #360063;
+}

@@ -49,7 +49,7 @@ export default function ServiceMovelInfo() {
               <h1>{item.desc}</h1>
               <br />
               <Button>
-                <FavoriteIcon style={{ color: "#4e008e", }} />
+                <FavoriteIcon style={{ color: "#fff" }} />
               </Button>
             </div>
           </div>
