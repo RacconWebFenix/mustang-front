@@ -5,10 +5,9 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #4e008e;
+  border: 5px solid #4e008e;
+  color: rgb(66, 66, 66);
   border-radius: 1rem;
-  color: #fff;
-  font-size: larger;
+  font-size: medium;
   font-weight: 900;
-  box-shadow: 0 0 15px #360063;
 }

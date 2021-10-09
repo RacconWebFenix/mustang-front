@@ -4,6 +4,23 @@
   margin-top: 1vh;
 }
 
+.borderCep {
+  margin-top: 1rem;
+  max-width: 50vh;
+  display: flex;
+  align-items: center;
+  border: 5px solid #4e008e;
+  border-radius: 1.5rem;
+}
+
+.cepContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .validate {
   display: flex;
   justify-content: center;
@@ -26,14 +43,12 @@
   font-weight: 900;
   text-align: center;
   color: #4e008e;
-  margin: 2rem;
 }
 
 .opcDelivery {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 95vw;
 }
 
 .cepContainer {
@@ -42,5 +57,26 @@
   align-content: center;
   align-items: center;
   justify-content: center;
+}
 
+
+.inputCep{
+  width: 18rem;
+  background-color: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  text-align: center;
+}
+.cepContainer span {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #4e008e;
+}
+
+.containerServiceMovelInfo{
+  margin-top: 1rem;
 }

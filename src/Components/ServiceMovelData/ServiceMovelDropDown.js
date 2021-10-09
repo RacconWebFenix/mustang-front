@@ -5,6 +5,9 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Api } from "../../Api/Api";
 import "./styles.css";
+import DateComponent from "../DateComponent";
+import DropTimeCourse from "../DropTimeCourse/DropTimeCourse";
+import SumaryItens from "../SumaryItens/SumaryItens";
 
 export default function ServiceMovelDropDown() {
   const [delivery, setDelivery] = useState("");
@@ -12,6 +15,7 @@ export default function ServiceMovelDropDown() {
   const getDataMovel = Api.serviceMovelData;
 
   const [dataMovel, setDataMovel] = useState([]);
+
 
   const loadDataMovel = () => {
     setDataMovel(getDataMovel);
@@ -60,6 +64,9 @@ export default function ServiceMovelDropDown() {
               <p>{dataMovel[delivery - 1].desc}</p>
               <p>R$ {dataMovel[delivery - 1].valor}</p>
             </div>
+            <DateComponent />
+            <DropTimeCourse />
+            <SumaryItens />
           </>
         )}
       </FormControl>

@@ -4,7 +4,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function DropDownDelivery() {
+export default function DropDownDeliveryFalse() {
   const [delivery, setDelivery] = React.useState("");
 
   const handleChange = (event) => {
@@ -29,9 +29,7 @@ export default function DropDownDelivery() {
           <MenuItem value="">
             <em>Opções de Entrega</em>
           </MenuItem>
-
           <MenuItem value={10}>Entrega em Casa</MenuItem>
-          <MenuItem value={20}>Serviço Movel</MenuItem>
           <MenuItem value={30}>Retirada com Parceiro</MenuItem>
         </Select>
       </FormControl>

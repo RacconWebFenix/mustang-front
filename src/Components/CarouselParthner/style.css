@@ -19,6 +19,8 @@
 }
 
 .inner.parthner button {
-  border: 1px solid #fff;
+  background-color: #4e008e;
   color: #fff;
+  margin: 0.3rem;
+  padding: 0.5rem;
 }

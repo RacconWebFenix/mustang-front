@@ -3,6 +3,16 @@ import imgParthnetData2 from "./CardParthnerImg/2.jpg";
 import imgParthnetData3 from "./CardParthnerImg/3.jpg";
 
 export const Api = {
+  baseUrl: "https://mustang-backapi.azurewebsites.net/Produto",
+
+  readAllUrl: () => Api.baseUrl,
+
+  buildApiGetRequest: (url) =>
+    fetch(url, {
+      method: "GET",
+      headers: new Headers({ "Content-Type": "application/json" }),
+    }),
+
   serviceMovelData: [
     {
       id: 1,
@@ -24,7 +34,7 @@ export const Api = {
       imagemUrl:
         "https://www.cantupneus.com.br/medias/sys_master/he2/h61/9469373775902/fotoOficina-37640212000143.jpg",
       combo: "Combo Básico 1 ou 2 Pneus (Aro 12 - 16)",
-      desc: "Montagem + Balanceamento | Apenas entrega em Centro de Montagem Esta opção não inclui o serviço de montagem, balanceamento e alinhamento",
+      desc: ["Montagem + Balanceamento" , "Apenas entrega em Centro de Montagem."],
       valor: "189.90",
     },
     {
@@ -33,7 +43,7 @@ export const Api = {
       imagemUrl:
         "https://www.cantupneus.com.br/medias/sys_master/h6e/h91/9538413035550/fotoOficina-08623310000174.jpg",
       combo: "Combo Básico 1 ou 2 Pneus (Aro 12 - 16)",
-      desc: "Montagem + Balanceamento",
+      desc: ["Montagem + Balanceamento"],
       valor: "219.90",
     },
     {
@@ -42,7 +52,7 @@ export const Api = {
       imagemUrl:
         "https://www.cantupneus.com.br/medias/sys_master/h71/ha2/9486653816862/fotoOficina-39843161000182.jpg",
       combo: " Combo Básico 1 ou 2 Pneus (Aro 12 - 16)",
-      desc: "Montagem + Balanceamento | Apenas entrega em Centro de Montagem Esta opção não inclui o serviço de montagem, balanceamento e alinhamento",
+      desc: ["Montagem + Balanceamento" , "Apenas entrega em Centro de Montagem."],
       valor: "149.90",
     },
     {
@@ -51,7 +61,7 @@ export const Api = {
       imagemUrl:
         "https://www.cantupneus.com.br/medias/sys_master/he2/h61/9469373775902/fotoOficina-37640212000143.jpg",
       combo: "Combo Básico 1 ou 2 Pneus (Aro 12 - 16)",
-      desc: "Montagem + Balanceamento | Apenas entrega em Centro de Montagem Esta opção não inclui o serviço de montagem, balanceamento e alinhamento",
+      desc: ["Montagem + Balanceamento" , "Apenas entrega em Centro de Montagem."],
       valor: "189.90",
     },
     {
@@ -60,7 +70,7 @@ export const Api = {
       imagemUrl:
         "https://www.cantupneus.com.br/medias/sys_master/h6e/h91/9538413035550/fotoOficina-08623310000174.jpg",
       combo: "Combo Básico 1 ou 2 Pneus (Aro 12 - 16)",
-      desc: "Montagem + Balanceamento",
+      desc: ["Montagem + Balanceamento"],
       valor: "219.90",
     },
     {
@@ -69,7 +79,7 @@ export const Api = {
       imagemUrl:
         "https://www.cantupneus.com.br/medias/sys_master/h71/ha2/9486653816862/fotoOficina-39843161000182.jpg",
       combo: " Combo Básico 1 ou 2 Pneus (Aro 12 - 16)",
-      desc: "Montagem + Balanceamento | Apenas entrega em Centro de Montagem Esta opção não inclui o serviço de montagem, balanceamento e alinhamento",
+      desc: ["Montagem + Balanceamento" , "Apenas entrega em Centro de Montagem.."],
       valor: "149.90",
     },
   ],

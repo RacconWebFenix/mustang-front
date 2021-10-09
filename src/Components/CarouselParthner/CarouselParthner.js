@@ -15,11 +15,13 @@ import "react-animated-slider/build/horizontal.css";
 import "normalize.css/normalize.css";
 import "./slider-animations.css";
 import "./styles.css";
+import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 
 export default function CarouselParthner() {
   const getDataParthner = Api.partnerData;
   const getServiceParthner = Api.partneService;
   const [index, setIndex] = useState(undefined);
+  const [indexRadio, setIndexRadio] = useState("");
 
   const [parthnerData, setParthnerData] = useState([]);
   const [parthnerService, setParthnerService] = useState([]);
@@ -58,7 +60,37 @@ export default function CarouselParthner() {
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
             {index.combo}
           </Typography>
-          <Typography variant="body2">{index.desc}</Typography>
+          <RadioGroup
+            label="Escola uma das Opções de Nosso Parceiro."
+            name="radio-buttons-group"
+          >
+            <FormControlLabel
+              value="1"
+              control={<Radio />}
+              label={index.desc[0]}
+              onClick={(e) => setIndexRadio(e.target.value)}
+            />
+            {index.desc[1] === undefined ? (
+              <p></p>
+            ) : (
+              <FormControlLabel
+                value="2"
+                control={<Radio />}
+                label={index.desc[1]}
+                onClick={(e) => setIndexRadio(e.target.value)}
+              />
+            )}
+          </RadioGroup>
+          {indexRadio === "1" ? (
+            <></>
+          ) : indexRadio === "2" ? (
+            <p>
+              Esta opção não inclui o serviço de montagem, balanceamento e
+              alinhamento
+            </p>
+          ) : (
+            <p></p>
+          )}
         </CardContent>
         <CardActions>
           <Button size="small">R${index.valor}</Button>
@@ -86,7 +118,8 @@ export default function CarouselParthner() {
                   onClick={() => handleClick(i)}
                   className="btnCarouselParthner"
                 >
-                  <FavoriteIcon style={{ color: "#fff" }} /> Escolher Parceiro
+                  <FavoriteIcon style={{ color: "#fff", marginRight: 6 }} />{" "}
+                  Escolher Parceiro
                 </Button>
               </div>
             </div>

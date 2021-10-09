@@ -1,54 +1,66 @@
-import React from "react";
-import CarouselParthner from "../../Components/CarouselParthner/CarouselParthner";
+import React, { useState } from "react";
 import ServiceMovelInfo from "../../Components/ServiceMovelInfo/ServiceMovelInfo";
 import Cart from "../Cart";
-import DateComponent from "../../Components/DateComponent";
-import DropDownDelivery from "../../Components/DropDownDelivery/DropDownDelivery";
-import DropTimeCourse from "../../Components/DropTimeCourse/DropTimeCourse";
 import "./style.css";
-import { Box } from "@material-ui/system";
-import { TextField } from "@material-ui/core";
-import ServiceMovelDropDown from "../../Components/ServiceMovelData/ServiceMovelDropDown";
+import DropDownDeliveryTrue from "../../Components/DropDownDelivery/DropDownDeliveryTrue";
+import DropDownDeliveryFalse from "../../Components/DropDownDelivery/DropDownDeliveryFalse";
 
 export default function Home() {
-  return (
-    <div>
+  const [cepValue, setCepValue] = useState("");
+
+  console.log(cepValue);
+
+  if (cepValue.length < 8) {
+    return (
       <div className="container">
         <Cart />
-      </div>
-      <div>
         <div className="cepContainer">
-          <Box>
-            <TextField label="CEP" sx={{ m: 3 }} />
-          </Box>
+          <span>Para continuar a compra digite seu cep.</span>
+          <div className="borderCep">
+            <input
+              type="text"
+              className="inputCep"
+              maxLength="8"
+              placeholder="Digite seu Cep"
+              onChange={(e) => setCepValue(e.target.value)}
+            />
+          </div>
         </div>
       </div>
-
+    );
+  } else {
+    return (
       <div>
-        <ServiceMovelInfo />
+        <div className="container">
+          <Cart />
+          <div className="cepContainer">
+            <span>Para continuar a compra digite seu cep.</span>
+            <div className="borderCep">
+              <input
+                type="text"
+                className="inputCep"
+                maxLength="8"
+                placeholder="Digite seu Cep"
+                onChange={(e) => setCepValue(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+        {cepValue === "11111111" ? (
+          <div>
+            <div className="containerServiceMovelInfo">
+              <ServiceMovelInfo />
+            </div>
+            <div className="containerDropDownTrue">
+              <DropDownDeliveryTrue />
+            </div>
+          </div>
+        ) : (
+          <div>
+            <DropDownDeliveryFalse />
+          </div>
+        )}
       </div>
-
-      <DropDownDelivery />
-      <div>
-        <ServiceMovelDropDown />
-      </div>
-
-      <div>
-        <CarouselParthner />
-      </div>
-      <div>
-        <DateComponent />
-      </div>
-      <div>
-        <DropTimeCourse />
-      </div>
-
-      <div className="cepContainer">
-        <Box>
-          <TextField label="Cupom de Desconto" sx={{ m: 3 }} />
-        </Box>
-      </div>
-      <div>Resumo da compra</div>
-    </div>
-  );
+    );
+  }
 }
