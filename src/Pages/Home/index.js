@@ -8,7 +8,6 @@ import DropDownDeliveryFalse from "../../Components/DropDownDelivery/DropDownDel
 export default function Home() {
   const [cepValue, setCepValue] = useState("");
 
-  console.log(cepValue);
 
   if (cepValue.length < 8) {
     return (

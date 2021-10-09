@@ -16,6 +16,7 @@ import "normalize.css/normalize.css";
 import "./slider-animations.css";
 import "./styles.css";
 import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
+import SumaryItens from "../SumaryItens/SumaryItens";
 
 export default function CarouselParthner() {
   const getDataParthner = Api.partnerData;
@@ -50,52 +51,60 @@ export default function CarouselParthner() {
 
   const card =
     index === undefined ? (
-      <div>Escolha um Parceiro</div>
+      <p className="chooseParthner">
+        Escolha um de nossos parceiros para continuar...
+      </p>
     ) : (
-      <React.Fragment>
-        <CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            {index.name}
-          </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            {index.combo}
-          </Typography>
-          <RadioGroup
-            label="Escola uma das Opções de Nosso Parceiro."
-            name="radio-buttons-group"
-          >
-            <FormControlLabel
-              value="1"
-              control={<Radio />}
-              label={index.desc[0]}
-              onClick={(e) => setIndexRadio(e.target.value)}
-            />
-            {index.desc[1] === undefined ? (
-              <p></p>
-            ) : (
+      <>
+        <React.Fragment>
+          <CardContent>
+            <Typography
+              sx={{ fontSize: 14 }}
+              color="text.secondary"
+              gutterBottom
+            >
+              {index.name}
+            </Typography>
+            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+              {index.combo}
+            </Typography>
+            <RadioGroup
+              label="Escola uma das Opções de Nosso Parceiro."
+              name="radio-buttons-group"
+            >
               <FormControlLabel
-                value="2"
+                value="1"
                 control={<Radio />}
-                label={index.desc[1]}
+                label={index.desc[0]}
                 onClick={(e) => setIndexRadio(e.target.value)}
               />
+              {index.desc[1] === undefined ? (
+                <p></p>
+              ) : (
+                <FormControlLabel
+                  value="2"
+                  control={<Radio />}
+                  label={index.desc[1]}
+                  onClick={(e) => setIndexRadio(e.target.value)}
+                />
+              )}
+            </RadioGroup>
+            {indexRadio === "1" ? (
+              <></>
+            ) : indexRadio === "2" ? (
+              <p>
+                Esta opção não inclui o serviço de montagem, balanceamento e
+                alinhamento
+              </p>
+            ) : (
+              <p></p>
             )}
-          </RadioGroup>
-          {indexRadio === "1" ? (
-            <></>
-          ) : indexRadio === "2" ? (
-            <p>
-              Esta opção não inclui o serviço de montagem, balanceamento e
-              alinhamento
-            </p>
-          ) : (
-            <p></p>
-          )}
-        </CardContent>
-        <CardActions>
-          <Button size="small">R${index.valor}</Button>
-        </CardActions>
-      </React.Fragment>
+          </CardContent>
+          <CardActions>
+            <Button size="small">R${index.valor}</Button>
+          </CardActions>
+        </React.Fragment>
+      </>
     );
 
   return (
@@ -127,9 +136,16 @@ export default function CarouselParthner() {
         })}
       </Slider>
       <div className="cardServiceCombo">
-        <Box sx={{ minWidth: 275, maxWidth: 275, minHeight: 275 }}>
+        <Box sx={{ minWidth: 275, maxWidth: "100%", minHeight: 235, maxHeigth: "50%" }}>
           <Card variant="outlined">{card}</Card>
         </Box>
+        {!indexRadio ? (
+          <p>Selecione uma das opções de nosso parceiro.</p>
+        ) : (
+          <div className="cardSumaryCombo">
+            <SumaryItens selectParthner={index.valor} />
+          </div>
+        )}
       </div>
     </>
   );

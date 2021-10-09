@@ -16,10 +16,8 @@ export default function ServiceMovelDropDown() {
 
   const [dataMovel, setDataMovel] = useState([]);
 
-
   const loadDataMovel = () => {
     setDataMovel(getDataMovel);
-    console.log(dataMovel);
   };
 
   useEffect(() => {
@@ -27,9 +25,7 @@ export default function ServiceMovelDropDown() {
   });
 
   const handleChange = (event) => {
-    const valueDelivery = event.target.value;
     setDelivery(event.target.value);
-    console.log(valueDelivery);
   };
 
   return (

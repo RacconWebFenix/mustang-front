@@ -39,7 +39,6 @@ export default function CardParthner() {
                 <i className="material-icons right">close</i>
               </span>
               <p>{pd.address}</p>
-
               <p>{pd.attendance}</p>
             </div>
           </div>

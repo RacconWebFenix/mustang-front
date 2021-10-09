@@ -12,17 +12,18 @@ import CarouselParthner from "../CarouselParthner/CarouselParthner";
 
 export default function DropDownDeliveryTrue() {
   const [delivery, setDelivery] = useState("");
-  const [cupomValue, setCupomValue] = useState("");
+
 
   const handleChange = (event) => {
-    const valueDelivery = event.target.value;
     setDelivery(event.target.value);
-    console.log(valueDelivery);
-  };
+   };
 
   return (
     <div className="opcDelivery">
-      <FormControl sx={{ m: 1 }}>
+      <label className="labelDelivery">
+        Escolha uma opção de Entrega
+      </label>
+      <FormControl sx={{ m: 1, mt: 3 }}>
         <InputLabel id="demo-simple-select-helper-label">
           Opções de Entrega
         </InputLabel>
@@ -52,7 +53,7 @@ export default function DropDownDeliveryTrue() {
                 className="inputCep"
                 maxLength="8"
                 placeholder="Cupom de Desconto"
-                onChange={(e) => setCupomValue(e.target.value)}
+       
               />
             </div>
           </div>
@@ -69,7 +70,10 @@ export default function DropDownDeliveryTrue() {
           <SumaryItens />
         </div>
       ) : delivery === 20 ? (
-        <ServiceMovelDropDown />
+        <>
+          <span style={{ marginTop: "1rem" }} />
+          <ServiceMovelDropDown />
+        </>
       ) : delivery === 30 ? (
         <CarouselParthner />
       ) : (
@@ -78,22 +82,3 @@ export default function DropDownDeliveryTrue() {
     </div>
   );
 }
-
-// (
-//   <>
-//     <div className="cepContainer">
-//         <span>Digite seu cupom de Descont</span>
-//         <div className="borderCep">
-//           <input type="text" className="inputCep" maxLength="8" placeholder="Cupom de Desconto"
-//             onChange={(e) => setCupomValue(e.target.value)}
-//           />
-//         </div>
-//       </div>
-
-//       <div>
-//       <DateComponent />
-//       </div>
-//   </>
-// ): (
-//   <div>Teste</div>
-// )}

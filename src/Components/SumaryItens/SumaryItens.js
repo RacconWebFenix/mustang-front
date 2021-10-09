@@ -3,10 +3,9 @@ import "./styleSumary.css";
 import { Api } from "../../Api/Api";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
-export default function SumaryItens() {
+export default function SumaryItens({ selectParthner }) {
   const [data, setData] = useState([]);
 
-  const qtd = 2;
 
   useEffect(() => {
     const loadData = async () => {
@@ -16,11 +15,9 @@ export default function SumaryItens() {
     };
     loadData();
   }, []);
-  console.log(data);
-  if(!data.length){
-    return <p>aguarde...</p>
-  }else {
-
+  if (!data.length) {
+    return <p>aguarde...</p>;
+  } else {
     return (
       <div className="centredClass">
         <div className="sumaryContainer">
@@ -44,12 +41,11 @@ export default function SumaryItens() {
             </div>
           </div>
           <div className="totalSumary">
-            R$ {parseFloat(data.length) + qtd + data[0].preco}
+            R$ {data[0].preco}
           </div>
           <span />
         </div>
       </div>
     );
   }
-
 }

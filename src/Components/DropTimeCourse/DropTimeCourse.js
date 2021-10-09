@@ -8,9 +8,7 @@ export default function DropTimeCourse() {
   const [delivery, setDelivery] = React.useState("");
 
   const handleChange = (event) => {
-    const valueDelivery = event.target.value;
     setDelivery(event.target.value);
-    console.log(valueDelivery);
   };
 
   return (
