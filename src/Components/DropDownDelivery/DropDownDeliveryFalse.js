@@ -3,6 +3,10 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import DateComponent from "../DateComponent";
+import DropTimeCourse from "../DropTimeCourse/DropTimeCourse";
+import SumaryItens from "../SumaryItens/SumaryItens";
+import CarouselParthner from "../CarouselParthner/CarouselParthner";
 
 export default function DropDownDeliveryFalse() {
   const [delivery, setDelivery] = React.useState("");
@@ -31,6 +35,40 @@ export default function DropDownDeliveryFalse() {
           <MenuItem value={30}>Retirada com Parceiro</MenuItem>
         </Select>
       </FormControl>
+      {delivery === 10 ? (
+        <div>
+          <div className="cepContainer">
+            <span>Digite seu cupom de Desconto</span>
+            <div className="borderCep">
+              <input
+                type="text"
+                className="inputCep"
+                maxLength="8"
+                placeholder="Cupom de Desconto"
+              />
+            </div>
+          </div>
+          <div>
+            <div className="cepContainer">
+              <span>Escolha a data de entrega.</span>
+              <DateComponent />
+            </div>
+          </div>
+          <div className="periodoContainer">
+            <span>Escolha um período.</span>
+            <DropTimeCourse />
+          </div>
+          <div style={{ margin: "1rem" }}>
+            <SumaryItens />
+          </div>
+        </div>
+      ) : delivery === 20 ? (
+        <></>
+      ) : delivery === 30 ? (
+        <CarouselParthner />
+      ) : (
+        <p></p>
+      )}
     </div>
   );
 }

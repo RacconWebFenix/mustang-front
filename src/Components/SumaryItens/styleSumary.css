@@ -3,9 +3,9 @@
   justify-content: space-around;
   padding: 0.3rem;
   border-bottom: none;
-  border-top:  5px solid #4e008e;
+  border-top: 5px solid #4e008e;
   border-radius: 1.5rem;
-  max-width: 20rem;
+  width: 100%;
   min-width: 15rem;
   align-content: center;
   align-items: center;
@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 .titleSumary {
@@ -24,53 +25,67 @@
   font-weight: 900;
   margin-bottom: 0.3rem;
   color: #4e008e;
-
 }
 .innerHeader {
-
+  max-width: 10rem;
 }
 
 .iconSumary {
-  color:  #4e008e; 
+  color: #4e008e;
+  text-align: center;
+  align-items: center;
 }
 
 .iconSumary svg {
   font-size: 3rem;
-  
+  margin-right: 4rem;
+ 
 }
 
-.totalSumary{
-  color:  #4e008e; 
+.totalSumary {
+  color: #4e008e;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .itensSumary {
   display: flex;
   font-size: small;
   font-weight: 500;
-  color: rgb(99, 99, 99)
+  color: rgb(99, 99, 99);
+  width: 100%;
 }
 
-.centredClass{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+.centredClass {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-
-
-
-
-.sumaryContainerBotton{
+.sumaryContainerBotton {
   display: flex;
   justify-content: space-around;
   padding: 0.3rem;
   border-top: none;
   border-bottom: 5px solid #4e008e;
   border-radius: 1.5rem;
-  max-width: 20rem;
   min-width: 15rem;
   align-content: center;
+  width: 100%;
   align-items: center;
+}
+
+
+.headerSumaryBotton{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
 }

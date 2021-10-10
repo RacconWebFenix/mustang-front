@@ -136,13 +136,20 @@ export default function CarouselParthner() {
         })}
       </Slider>
       <div className="cardServiceCombo">
-        <Box sx={{ minWidth: 275, maxWidth: "100%", minHeight: 235, maxHeigth: "50%" }}>
+        <Box
+          sx={{
+            minWidth: 275,
+            maxWidth: "100%",
+            minHeight: 235,
+            maxHeigth: "50%",
+          }}
+        >
           <Card variant="outlined">{card}</Card>
         </Box>
         {!indexRadio ? (
           <p>Selecione uma das opções de nosso parceiro.</p>
         ) : (
-          <div className="cardSumaryCombo">
+          <div style={{ margin: "1rem" }}>
             <SumaryItens selectParthner={index.valor} />
           </div>
         )}

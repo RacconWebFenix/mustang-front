@@ -1,3 +1,5 @@
+import { CircularProgress } from "@material-ui/core";
+import { Box } from "@material-ui/system";
 import React, { useState, useEffect } from "react";
 import { Api } from "../../Api/Api";
 import "./style.css";
@@ -14,19 +16,23 @@ export default function Cart() {
     loadData();
   }, []);
 
-  if (!data) {
-    return <p>Carregando...</p>;
+  if (data.length < 1) {
+    return (
+      <Box color="secondary" sx={{ display: "flex", justifyContent: "center"}}>
+        <CircularProgress />
+      </Box>
+    );
   } else {
     return (
       <div className="cartContainer">
-        <div className="borderCart" >
+        <div className="borderCart">
           {data.map((c, i) => {
             return (
               <div key={c.id}>
-                <div className="containerInnerCart" >
+                <div className="containerInnerCart">
                   <div className="cartImageContainer">
                     <div className="titloCart">{c.marca}</div>
-                    <img src={c.imgUrl} alt={c.tipo} className="cartImage"  />
+                    <img src={c.imgUrl} alt={c.tipo} className="cartImage" />
                   </div>
                   <div className="infoContainer">
                     <ul>
