@@ -25,6 +25,9 @@ export default function Cart() {
   } else {
     return (
       <div className="cartContainer">
+                <div className="meuCarrinho">
+                  Meu Carrinho
+                </div>
         <div className="borderCart">
           {data.map((c, i) => {
             return (
