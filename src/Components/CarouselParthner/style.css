@@ -35,3 +35,11 @@
 .cardSumaryCombo {
   margin-top: 1rem;
 }
+
+.activeValue {
+  display: flex;
+}
+
+.notValue {
+  display: none;
+}

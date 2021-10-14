@@ -26,6 +26,7 @@ export default function CarouselParthner() {
 
   const [parthnerData, setParthnerData] = useState([]);
   const [parthnerService, setParthnerService] = useState([]);
+  const [displayValue, setDisplayValue] = useState("");
 
   const loadDatParthner = () => {
     setParthnerData(getDataParthner);
@@ -37,13 +38,19 @@ export default function CarouselParthner() {
   useEffect(() => {
     loadDatParthner();
   });
+  useEffect(() => {
+    if (indexRadio === "1") {
+      setDisplayValue("activeValue");
+    } else {
+      setDisplayValue("notValue");
+    }
+  }, [indexRadio]);
 
   useEffect(() => {
     loadServiceParthner();
   });
 
   const handleClick = (i) => {
-    console.log(i);
     const indexPartner = i + 1;
     const pdindex = parthnerService.filter((pd) => pd.id === indexPartner);
     setIndex(...pdindex);
@@ -101,7 +108,9 @@ export default function CarouselParthner() {
             )}
           </CardContent>
           <CardActions>
-            <Button size="small">R${index.valor}</Button>
+            <Button size="small" className={displayValue}>
+              R${index.valor}
+            </Button>
           </CardActions>
         </React.Fragment>
       </>
