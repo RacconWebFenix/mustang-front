@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-top: 1vh;
 }
 
 .borderCep {
@@ -59,8 +58,7 @@
   justify-content: center;
 }
 
-
-.inputCep{
+.inputCep {
   width: 18rem;
   background-color: transparent;
   border-top: 0;
@@ -77,6 +75,12 @@
   color: #4e008e;
 }
 
-.containerServiceMovelInfo{
+.containerServiceMovelInfo {
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+   margin-top: 5rem;
+  }
 }

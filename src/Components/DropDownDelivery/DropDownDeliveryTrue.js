@@ -13,16 +13,13 @@ import CarouselParthner from "../CarouselParthner/CarouselParthner";
 export default function DropDownDeliveryTrue() {
   const [delivery, setDelivery] = useState("");
 
-
   const handleChange = (event) => {
     setDelivery(event.target.value);
-   };
+  };
 
   return (
     <div className="opcDelivery">
-      <label className="labelDelivery">
-        Escolha uma opção de Entrega
-      </label>
+      <label className="labelDelivery">Escolha uma opção de Entrega</label>
       <FormControl sx={{ m: 1, mt: 3 }}>
         <InputLabel id="demo-simple-select-helper-label">
           Opções de Entrega
@@ -44,31 +41,34 @@ export default function DropDownDeliveryTrue() {
         </Select>
       </FormControl>
       {delivery === 10 ? (
-        <div>
-          <div className="cepContainer">
-            <span>Digite seu cupom de Desconto</span>
-            <div className="borderCep">
-              <input
-                type="text"
-                className="inputCep"
-                maxLength="8"
-                placeholder="Cupom de Desconto"
-       
-              />
-            </div>
-          </div>
+        <>
           <div>
-            <div className="cepContainer">
-              <span>Escolha a data de entrega.</span>
-              <DateComponent />
+            <div>
+              <div className="cepContainer">
+                <span>Escolha a data de entrega.</span>
+                <DateComponent />
+              </div>
+            </div>
+            <div className="periodoContainer">
+              <span>Escolha um período.</span>
+              <DropTimeCourse />
+              <div className="cepContainer">
+                <span>Digite seu cupom de Desconto</span>
+                <div className="borderCep">
+                  <input
+                    type="text"
+                    className="inputCep"
+                    maxLength="8"
+                    placeholder="Cupom de Desconto"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="periodoContainer">
-            <span>Escolha um período.</span>
-            <DropTimeCourse />
+          <div style={{ margin: "1rem" }}>
+            <SumaryItens />
           </div>
-          <SumaryItens />
-        </div>
+        </>
       ) : delivery === 20 ? (
         <>
           <span style={{ marginTop: "1rem" }} />

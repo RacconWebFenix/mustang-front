@@ -22,7 +22,7 @@ export default function CarouselParthner() {
   const getDataParthner = Api.partnerData;
   const getServiceParthner = Api.partneService;
   const [index, setIndex] = useState(undefined);
-  const [indexRadio, setIndexRadio] = useState("");
+  const [indexRadio, setIndexRadio] = useState(undefined);
 
   const [parthnerData, setParthnerData] = useState([]);
   const [parthnerService, setParthnerService] = useState([]);
@@ -38,11 +38,14 @@ export default function CarouselParthner() {
   useEffect(() => {
     loadDatParthner();
   });
+
   useEffect(() => {
-    if (indexRadio === "1") {
-      setDisplayValue("activeValue");
-    } else {
+    if (indexRadio === undefined) {
       setDisplayValue("notValue");
+    } else if (indexRadio === "2") {
+      setDisplayValue("notValue");
+    } else if (indexRadio === "1") {
+      setDisplayValue("activeValue");
     }
   }, [indexRadio]);
 
@@ -99,18 +102,16 @@ export default function CarouselParthner() {
             {indexRadio === "1" ? (
               <></>
             ) : indexRadio === "2" ? (
-              <p>
+              <div id="infocardParthner">
                 Esta opção não inclui o serviço de montagem, balanceamento e
                 alinhamento
-              </p>
+              </div>
             ) : (
               <p></p>
             )}
           </CardContent>
           <CardActions>
-            <Button size="small" className={displayValue}>
-              R${index.valor}
-            </Button>
+            <div className={displayValue}>R${index.valor}</div>
           </CardActions>
         </React.Fragment>
       </>
@@ -144,22 +145,28 @@ export default function CarouselParthner() {
           );
         })}
       </Slider>
-      <div className="cardServiceCombo">
-        <Box
-          sx={{
-            minWidth: 275,
-            maxWidth: "100%",
-            minHeight: 235,
-            maxHeigth: "50%",
-          }}
-        >
+      <div>
+        <Box>
           <Card variant="outlined">{card}</Card>
         </Box>
         {!indexRadio ? (
-          <p>Selecione uma das opções de nosso parceiro.</p>
+          <></>
         ) : (
-          <div style={{ margin: "1rem" }}>
-            <SumaryItens selectParthner={index.valor} />
+          <div>
+            <div className="cepContainer">
+              <span>Digite seu cupom de Desconto</span>
+              <div className="borderCep">
+                <input
+                  type="text"
+                  className="inputCep"
+                  maxLength="8"
+                  placeholder="Cupom de Desconto"
+                />
+              </div>
+            </div>
+            <div style={{ margin: "1rem" }}>
+              <SumaryItens selectParthner={index.valor} />
+            </div>
           </div>
         )}
       </div>

@@ -62,7 +62,20 @@ export default function ServiceMovelDropDown() {
             </div>
             <DateComponent />
             <DropTimeCourse />
+            <div className="cepContainer">
+              <span>Digite seu cupom de Desconto</span>
+              <div className="borderCep">
+                <input
+                  type="text"
+                  className="inputCep"
+                  maxLength="8"
+                  placeholder="Cupom de Desconto"
+                />
+              </div>
+            </div>
+            <div style={{ margin: "1rem" }}>
             <SumaryItens />
+          </div>
           </>
         )}
       </FormControl>

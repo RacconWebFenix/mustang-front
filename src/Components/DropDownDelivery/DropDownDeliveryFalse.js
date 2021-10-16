@@ -37,6 +37,17 @@ export default function DropDownDeliveryFalse() {
       </FormControl>
       {delivery === 10 ? (
         <div>
+
+          <div>
+            <div className="cepContainer">
+              <span>Escolha a data de entrega.</span>
+              <DateComponent />
+            </div>
+          </div>
+          <div className="periodoContainer">
+            <span>Escolha um período.</span>
+            <DropTimeCourse />
+          </div>
           <div className="cepContainer">
             <span>Digite seu cupom de Desconto</span>
             <div className="borderCep">
@@ -47,16 +58,6 @@ export default function DropDownDeliveryFalse() {
                 placeholder="Cupom de Desconto"
               />
             </div>
-          </div>
-          <div>
-            <div className="cepContainer">
-              <span>Escolha a data de entrega.</span>
-              <DateComponent />
-            </div>
-          </div>
-          <div className="periodoContainer">
-            <span>Escolha um período.</span>
-            <DropTimeCourse />
           </div>
           <div style={{ margin: "1rem" }}>
             <SumaryItens />

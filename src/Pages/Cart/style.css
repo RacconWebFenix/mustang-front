@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .borderCart {
@@ -16,6 +17,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  max-width: 25rem;
 }
 
 .cartImage {

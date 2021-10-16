@@ -38,8 +38,23 @@
 
 .activeValue {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: larger;
+  font-weight: 900;
+  color:  #9008ff;;
 }
 
 .notValue {
   display: none;
+}
+
+#infocardParthner{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: medium;
+  font-weight: 900;
+  color:  #9008ff;;
 }
