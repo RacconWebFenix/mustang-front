@@ -3,8 +3,6 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import DateComponent from "../DateComponent";
-import DropTimeCourse from "../DropTimeCourse/DropTimeCourse";
 import SumaryItens from "../SumaryItens/SumaryItens";
 import CarouselParthner from "../CarouselParthner/CarouselParthner";
 
@@ -37,17 +35,6 @@ export default function DropDownDeliveryFalse() {
       </FormControl>
       {delivery === 10 ? (
         <div>
-
-          <div>
-            <div className="cepContainer">
-              <span>Escolha a data de entrega.</span>
-              <DateComponent />
-            </div>
-          </div>
-          <div className="periodoContainer">
-            <span>Escolha um período.</span>
-            <DropTimeCourse />
-          </div>
           <div className="cepContainer">
             <span>Digite seu cupom de Desconto</span>
             <div className="borderCep">
