@@ -16,7 +16,7 @@ O projeto foi desenvolvido durante o módulo 05 do Curso de Programação na Blu
 ### O Fluxo acontece da seguinte forma:
 
 - É carregado uma tela do carrinho de compras  já contendo um endpoint que retorna todos os produtos com o método GetAll();
-- Em seguida o cliente insere o CEP de sua residência;
+- Em seguida o cliente insere o CEP de sua residência (Para fins demonstrativos o valor 11111111 retorna verdadeiro, significando a disponibilidade dos serviços móveis, qualquer outro valor retorna false.);
 - Se houver serviço móvel disponível para o CEP, será carregado um carrossel mostrando os parceiros cadastrados aptos a atenderem ao cliente;
 - O DropDown com o serviço móvel terá 3 opções de entrega, sendo o Serviço Móvel, a Retirada em um Parceiro e a Entrega em casa.
 - No serviço móvel o Cliente poderá escolher um combo, logo em seguida aparece um card com a descrição do combo.
