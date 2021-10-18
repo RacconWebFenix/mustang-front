@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Mustang App
+## Descrição do Projeto
+API criada para  simplificar uma tela de escolha do modo de entrega de uma maneira mais dinâmica e atraente. Sendo, como principal objetivo aumentar a conversão de vendas nas opções de entrega.
+O projeto foi desenvolvido durante o módulo 05 do Curso de Programação na Blue EdTech. O desafio foi proposto pelo Grupo Level, que possui o maior e-commerce de venda de pneus do Brasil, denominado Pneustore, que agora com dois novos modos de entrega lançados em 2021:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Montagem Móvel
+- Montagem Via Parceiro
+- Entrega Em Casa
 
-## Available Scripts
+[![Generic badge](https://img.shields.io/badge/Version-1.0-<COLOR>.svg)](https://shields.io/)
 
-In the project directory, you can run:
+## Estrutura da Aplicação
 
-### `yarn start`
+### A Aplicação segue um fluxo simples e direto, visando dar ao cliente mais agilidade ao processo de compra.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### O Fluxo acontece da seguinte forma:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- É carregado uma tela do carrinho de compras  já contendo um endpoint que retorna todos os produtos com o método GetAll();
+- Em seguida o cliente insere o CEP de sua residência;
+- Se houver serviço móvel disponível para o CEP, será carregado um carrossel mostrando os parceiros cadastrados aptos a atenderem ao cliente;
+- O DropDown com o serviço móvel terá 3 opções de entrega, sendo o Serviço Móvel, a Retirada em um Parceiro e a Entrega em casa.
+- No serviço móvel o Cliente poderá escolher um combo, logo em seguida aparece um card com a descrição do combo.
+- Um calendário aparece para que o usuário possa escolher uma data para entrega.
+- Logo em seguida o Cliente seleciona um perídodo e se tiver, um cupom de desconto.
+- Então, para finalizar um resumo da compra é disponibilizado.
+- Na entrega em casa o Cliente não tem a opção de escolher um Combo, então em seguida aparece o resumo da compra.
+- Na opção de Retirada com o parceiro irá aparecer um  Carrossel com os parceiros existentes.
+- Em seguida surge um card contendo opções de combo, sendo eles:  Apenas entrega em Centro de Montagem ,  Montagem + Balanceamento, e Cupom de  desconto, finalizando com  o resumo da compra.
 
-### `yarn test`
+# Informações Técnicas
+O Back-End desta aplicação foi desenvolvido em linguagem C#, com o framework .NET Core 5.0. Os seguintes pacotes foram utilizados para o desenvolvimento da aplicação:
+- Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.AspNetCore.Identity.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Tools
+- Microsoft.AspNetCore.Identity.UI
+O Front-End da aplicação foi desenvolvido em linguagem Javascript, Reactjs, UI Lib e React-animated.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para finalizar segue abaixo o link da Aplicação Para Melhores Avaliações:
+https://mustangfrontapp.herokuapp.com/
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Autores
+### Ycaro Batalha
+<img style="border-radius: 80%;" src="https://i1.sndcdn.com/avatars-001002863491-80v8qp-t500x500.jpg" width="100px;" alt=""/>
+<a href="https://www.linkedin.com/in/ycaro-gabriel-da-costa-batalha-2019" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Leonardo Pereira
+<img style = "border radius: 80%;" src = "https://media-exp1.licdn.com/dms/image/C4E03AQF3gkIPWId44w/profile-displayphoto-shrink_800_800/0/1634427027151?e=1640217600&v=beta&t=TLQ0SlmK5mKZjqDEfzzC9ahws7MmK9r9jQHsQtGAYQI" width ="100px;" alt = "" />
+<a href="https://www.linkedin.com/in/leonardo-pereira-41353117a/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Marcos César Domingues
+<img style = "border radius: 80%;" src = "https://avatars.githubusercontent.com/u/67762118?v=4" width ="100px;" alt = "" />
+<a href="https://www.linkedin.com/in/marcos-domingues-bbb7b21b7" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 
-### `yarn eject`
+### Rosicleia Fürst
+<img style = "border radius: 80%;" src = "https://media-exp1.licdn.com/dms/image/C4D03AQHYdL5Nzs-pSw/profile-displayphoto-shrink_200_200/0/1634436390550?e=1640217600&v=beta&t=r93PMuszmM0r_4cqAn62WOBFI1oJhFJDYQweIZx2vxM" width ="100px;" alt = "" />
+<a href="https://www.linkedin.com/in/rosicleiafurst/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Thiago Leão
+<img style = "border radius: 80%;" src = "https://media-exp1.licdn.com/dms/image/C4D03AQG3dTQ5jHJRRg/profile-displayphoto-shrink_800_800/0/1613065807294?e=1640217600&v=beta&t=UjTbp-8_LIak58jI4mYlHswx36okLae6A4GIl_wmUt4" width ="100px;" alt = "" />
+<a href="https://www.linkedin.com/in/thiago-le%C3%A3o-62988784/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
