@@ -17,7 +17,7 @@ export default function DropDownDeliveryTrue() {
 
   return (
     <div className="opcDelivery">
-      <label className="labelDelivery">Escolha uma opção de Entrega</label>
+      <label className="labelDelivery">Escolha uma opção de entrega.</label>
       <FormControl sx={{ m: 1, mt: 3 }}>
         <InputLabel id="demo-simple-select-helper-label">
           Opções de Entrega
@@ -43,7 +43,7 @@ export default function DropDownDeliveryTrue() {
           <div>
             <div className="periodoContainer">
               <div className="cepContainer">
-                <span>Digite seu cupom de Desconto</span>
+                <span>Digite seu cupom de desconto.</span>
                 <div className="borderCep">
                   <input
                     type="text"

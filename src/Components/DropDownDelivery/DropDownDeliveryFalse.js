@@ -36,7 +36,7 @@ export default function DropDownDeliveryFalse() {
       {delivery === 10 ? (
         <div>
           <div className="cepContainer">
-            <span>Digite seu cupom de Desconto</span>
+            <span>Digite seu cupom de desconto.</span>
             <div className="borderCep">
               <input
                 type="text"

@@ -53,7 +53,7 @@ export default function ServiceMovelDropDown() {
           })}
         </Select>
         {delivery < 1 ? (
-          <p>Nunhum Combo Selecionado</p>
+          <p className="cepContainer">Nenhum Combo Selecionado</p>
         ) : (
           <>
             <div className="optMovel">
@@ -63,7 +63,7 @@ export default function ServiceMovelDropDown() {
             <DateComponent />
             <DropTimeCourse />
             <div className="cepContainer">
-              <span>Digite seu cupom de Desconto</span>
+              <span>Digite seu cupom de desconto.</span>
               <div className="borderCep">
                 <input
                   type="text"

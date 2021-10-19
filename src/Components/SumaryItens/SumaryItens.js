@@ -20,7 +20,7 @@ export default function SumaryItens({ selectParthner }) {
   }, []);
 
   const handleClickBtn = (e) => {
-    toast.success("Compra Efetuada com sucesso!");
+    toast.success("Compra efetuada com sucesso!");
   };
 
   if (!data.length) {

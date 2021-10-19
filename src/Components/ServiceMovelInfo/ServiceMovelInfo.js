@@ -36,7 +36,7 @@ export default function ServiceMovelInfo() {
           className="serviceMovelContentTitle"
           style={{ fontSize: "1rem", padding: "1rem" }}
         >
-          Conheça Nosso Serviço Móvel disponível para seu CEP!
+          Conheça nosso serviço móvel disponível para seu CEP!
         </div>
       </div>
       <Slider className="slider-wrapper" touchDisabled={true}>

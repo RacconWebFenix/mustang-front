@@ -28,8 +28,8 @@ export default function DropTimeCourse() {
             <em>Escolha o Período</em>
           </MenuItem>
 
-          <MenuItem value={10}>Matunino</MenuItem>
-          <MenuItem value={20}>Vespertino</MenuItem>
+          <MenuItem value={10}>Manhã</MenuItem>
+          <MenuItem value={20}>Tarde</MenuItem>
         </Select>
       </FormControl>
     </div>

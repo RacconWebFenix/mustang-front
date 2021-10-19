@@ -104,7 +104,7 @@ export default function CarouselParthner() {
             ) : indexRadio === "2" ? (
               <div id="infocardParthner">
                 Esta opção não inclui o serviço de montagem, balanceamento e
-                alinhamento
+                alinhamento.
               </div>
             ) : (
               <p></p>
@@ -154,7 +154,7 @@ export default function CarouselParthner() {
         ) : (
           <div>
             <div className="cepContainer">
-              <span>Digite seu cupom de Desconto</span>
+              <span>Digite seu cupom de desconto.</span>
               <div className="borderCep">
                 <input
                   type="text"
