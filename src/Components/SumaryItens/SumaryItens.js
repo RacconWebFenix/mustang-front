@@ -35,7 +35,7 @@ export default function SumaryItens({ selectParthner }) {
         <div className="sumaryContainer">
           <div className="headerSumary">
             <div className="innerHeader">
-              <div className="titleSumary">Resumo do Pedido</div>
+              <div className="titleSumary">Resumo do pedido</div>
               <div className="itensSumary">
                 {data.length} itens no seu carrinho.
               </div>
@@ -49,7 +49,7 @@ export default function SumaryItens({ selectParthner }) {
         <div className="sumaryContainerBotton">
           <div className="headerSumaryBotton">
             <div className="innerHeader">
-              <div className="titleSumary">Total a Pagar</div>
+              <div className="titleSumary">Total a pagar</div>
             </div>
           </div>
           <div className="totalSumary">

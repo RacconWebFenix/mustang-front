@@ -27,7 +27,7 @@ export default function DropDownDeliveryFalse() {
           onChange={handleChange}
         >
           <MenuItem value="">
-            <em>Opções de Entrega</em>
+            <em>Opções de entrega.</em>
           </MenuItem>
           <MenuItem value={10}>Entrega em Casa</MenuItem>
           <MenuItem value={30}>Retirada com Parceiro</MenuItem>
