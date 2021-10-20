@@ -18,16 +18,16 @@ export default function Cart() {
 
   if (data.length < 1) {
     return (
-      <Box color="secondary" sx={{ display: "flex", justifyContent: "center"}}>
+      <Box color="secondary" sx={{ display: "flex", justifyContent: "center" }}>
         <CircularProgress />
       </Box>
     );
   } else {
+  
+    
     return (
       <div className="cartContainer">
-                <div className="meuCarrinho">
-                  Meu Carrinho
-                </div>
+        <div className="meuCarrinho">Meu Carrinho</div>
         <div className="borderCart">
           {data.map((c, i) => {
             return (
@@ -42,10 +42,16 @@ export default function Cart() {
                       <li>{c.tipo}</li>
                       <li>{c.descricao}</li>
                       <li className="qtdStyleContainer">
-                        <label>Qtd:</label>
-                        <input type="number" className="qtdStyle" />
+                        <label>Qtd: </label>
+                        <input
+                          type="number"
+                          className="qtdStyle"
+                          defaultValue={c.quantidade}
+                          disabled
+                          min="0"
+                        />
                       </li>
-                      <li className="preco">R${c.preco}</li>
+                      <li className="preco">R${c.quantidade * c.preco}</li>
                     </ul>
                   </div>
                 </div>

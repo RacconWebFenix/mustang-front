@@ -30,6 +30,11 @@ export default function SumaryItens({ selectParthner }) {
       </Box>
     );
   } else {
+    const totalValues = data.reduce(
+      (acc, crr) => acc + crr.preco * crr.quantidade,
+      0
+    );
+
     return (
       <div className="centredClass">
         <div className="sumaryContainer">
@@ -52,12 +57,7 @@ export default function SumaryItens({ selectParthner }) {
               <div className="titleSumary">Total a pagar</div>
             </div>
           </div>
-          <div className="totalSumary">
-            R${" "}
-            {data
-              .reduce((accumulator, { preco }) => accumulator + preco, 0)
-              .toFixed(2)}
-          </div>
+          <div className="totalSumary">R${totalValues.toFixed(2)}</div>
           <span />
         </div>
         <div className="buttonsContainer">
